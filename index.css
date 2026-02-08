@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+    /* Colors - Backgrounds */
+    --color-background: #0a0a0a;
+    --color-surface: #121212;
+    --color-surface-highlight: #1E1E1E;
+
+    /* Colors - Gold (Luxury Accents) */
+    --color-gold-100: #F9F1D8;
+    --color-gold-200: #F0E3B4;
+    --color-gold-300: #E6D590;
+    --color-gold-400: #DCC76C;
+    --color-gold-500: #D4AF37;
+    --color-gold-600: #AA8C2C;
+    --color-gold-700: #806921;
+    --color-gold-800: #554616;
+    --color-gold-900: #2B230B;
+
+    /* Colors - Functional */
+    --color-success: #10B981;
+    --color-error: #EF4444;
+
+    /* Colors - Text */
+    --color-text-primary: #FAFAFA;
+    --color-text-secondary: #A1A1AA;
+    --color-text-muted: #52525B;
+
+    /* Fonts */
+    --font-sans: 'Inter', sans-serif;
+    --font-serif: 'Playfair Display', serif;
+}
+
+@layer base {
+    body {
+        @apply bg-background text-text-primary antialiased;
+    }
+}
+
+@layer utilities {
+    .glass {
+        @apply bg-surface/80 backdrop-blur-md border border-white/5;
+    }
+
+    .glass-card {
+        @apply bg-surface border border-white/5 shadow-xl;
+    }
+
+    .text-gold-gradient {
+        @apply bg-clip-text text-transparent bg-linear-to-r from-gold-300 via-gold-500 to-gold-300;
+    }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Quality Estética",
+  "description": "Sistema SaaS completo para gestão de clínicas de estética com prontuário visual e gestão inteligente.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
